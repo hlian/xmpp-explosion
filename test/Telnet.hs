@@ -7,9 +7,5 @@ main :: IO ()
 main = do
   args <- getArgs
   case args of
-    [host, port] -> telnet host $ PortNumber $ fromInteger $ (read port :: Integer)
-    _ -> usageExit
-  where
-    usageExit = do
-         name <- getProgName
-         putStrLn $ "Usage : " ++ name ++ " host port"
+    [host, port] -> telnet host $ (read port :: Int)
+    _ -> putStrLn $ "Usage: [prog] host port"
