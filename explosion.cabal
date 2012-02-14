@@ -1,0 +1,20 @@
+Name: explosion
+Version: 0.1
+License: BSD3
+License-file: LICENSE
+Author: Hao Lian
+Maintainer: me@haolian.org
+Category: Network
+Build-type: Simple
+Cabal-version: >=1.8
+
+Library
+  Exposed-modules: Network.Protocol.Explosion
+  Build-depends: base, network>=2.3.0.6, conduit==0.2.1, transformers==0.2.2.0
+  Hs-source-dirs: src
+
+Executable test-telnet
+  Main-is: Telnet.hs
+  Build-depends: base, network>=2.3.0.6, explosion
+  Hs-source-dirs: test
+
